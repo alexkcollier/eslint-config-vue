@@ -1,5 +1,5 @@
 {
-  "name": "@acollier/eslint-config",
+  "name": "eslint-config-acollier",
   "version": "1.0.0",
   "description": "eslint-config extending eslint-plugin-vue and eslint-plugin-pretter",
   "main": "index.js",
