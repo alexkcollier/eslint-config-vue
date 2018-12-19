@@ -1,3 +1,3 @@
-# @acollier/eslint-config
+# @acollier/eslint-config-vue
 
 My eslint config
