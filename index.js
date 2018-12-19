@@ -4,12 +4,12 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: ['plugin:vue/recommended', 'plugin:prettier/recommended'],
-  plugins: ['prettier'],
+  extends: ['standard', 'plugin:prettier/recommended', 'prettier', 'plugin:vue/recommended'],
+  plugins: ['standard', 'vue', 'prettier'],
   rules: {
     semi: [2, 'never'],
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': 'off',
+    'no-debugger': 'off',
     'prettier/prettier': [
       'error',
       {
@@ -18,15 +18,7 @@ module.exports = {
         printWidth: 100
       }
     ],
-    'vue/max-attributes-per-line': [
-      2,
-      {
-        singleline: 3,
-        multiline: {
-          max: 1,
-          allowFirstLine: false
-        }
-      }
-    ]
+    'vue/no-v-html': 'off',
+    'vue/component-name-in-template-casing': 'off'
   }
 }
