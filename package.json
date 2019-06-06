@@ -6,6 +6,9 @@
   "author": "Alex Collier",
   "license": "MIT",
   "repository": "https://github.com/alexkcollier/eslint-config-vue.git",
+  "scripts": {
+    "test": "echo 'No tests configured'"
+  },
   "dependencies": {
     "@acollier/eslint-config": "^2.0.2",
     "eslint-plugin-vue": "^5.0.0"
