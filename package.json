@@ -5,16 +5,31 @@
   "main": "index.js",
   "author": "Alex Collier",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "https://github.com/alexkcollier/eslint-config-vue.git",
   "scripts": {
-    "test": "echo 'No tests configured'"
+    "lint": "eslint . --config=index.js",
+    "release": "standard-version && git push --follow-tags && yarn publish --non-interactive"
   },
   "dependencies": {
-    "@acollier/eslint-config": "^2.0.2",
-    "eslint-plugin-vue": "^5.0.0"
+    "@acollier/eslint-config": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "standard-version": "^6.0.1"
   },
   "peerDependencies": {
-    "eslint": "^5.10.0",
-    "prettier": "1.14.3"
+    "@acollier/eslint-config": ">=1.0.1",
+    "eslint": ">=5.16.0",
+    "eslint-plugin-vue": ">=5.2.2"
   }
 }
