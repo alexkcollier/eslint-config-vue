@@ -11,7 +11,8 @@
   "repository": "https://github.com/alexkcollier/eslint-config-vue.git",
   "scripts": {
     "lint": "eslint . --config=index.js",
-    "release": "standard-version && git push --follow-tags && yarn publish --non-interactive"
+    "release": "standard-version && git push --follow-tags && yarn publish --non-interactive",
+    "test": "echo \"No tests configured\""
   },
   "dependencies": {
     "@acollier/eslint-config": "^2.0.2"
