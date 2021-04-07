@@ -1,17 +1,45 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true,
-  },
-  extends: ['@acollier/eslint-config', 'plugin:vue/recommended'],
-  plugins: ['vue'],
+  extends: [
+    '@acollier/eslint-config',
+    'plugin:vue/recommended',
+  ],
+  plugins: [
+    'vue',
+  ],
   rules: {
-    'vue/arrow-spacing': ['error', { before: true, after: true }],
+    'no-shadow': [
+      'error',
+      {
+        allow: [
+          'state',
+        ],
+      },
+    ],
+    'vue/arrow-spacing': [
+      'error',
+      {
+        before: true,
+        after: true,
+      },
+    ],
     'vue/block-spacing': ['error', 'always'],
-    'vue/brace-style': ['error', '1tbs', { allowSingleLine: true }],
-    'vue/camelcase': ['warn', { ignoreDestructuring: true }],
-    'vue/comma-dangle': ['error', 'always-multiline'],
+    'vue/brace-style': [
+      'error',
+      '1tbs',
+      {
+        allowSingleLine: true,
+      },
+    ],
+    'vue/camelcase': [
+      'warn',
+      {
+        ignoreDestructuring: true,
+      },
+    ],
+    'vue/comma-dangle': [
+      'error',
+      'always-multiline',
+    ],
     'vue/component-name-in-template-casing': [
       'error',
       'PascalCase',
@@ -20,16 +48,26 @@ module.exports = {
       },
     ],
     'vue/eqeqeq': ['error', 'smart'],
-    'vue/key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    'vue/key-spacing': [
+      'error',
+      {
+        beforeColon: false,
+        afterColon: true,
+      },
+    ],
     'vue/match-component-file-name': [
       'error',
       {
-        extensions: ['vue', 'js', 'jsx'],
+        extensions: [
+          'vue',
+          'js',
+          'jsx',
+        ],
         shouldMatchCase: true,
       },
     ],
     'vue/max-attributes-per-line': [
-      2,
+      'error',
       {
         singleline: 1,
         multiline: {
@@ -38,5 +76,17 @@ module.exports = {
         },
       },
     ],
+    'vue/max-len': [
+      'error',
+      {
+        code: 100,
+        ignoreHTMLAttributeValues: true,
+        ignoreComments: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+        ignoreUrls: true,
+      },
+    ],
   },
-}
+};
